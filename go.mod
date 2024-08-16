@@ -1,4 +1,4 @@
-module distributed-kv-store
+module github.com/aqwervinker/distributed-kv-store
 
 go 1.22.4
 
