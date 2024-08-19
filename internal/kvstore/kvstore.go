@@ -64,3 +64,10 @@ func (n *Node) GetStore() map[string]string {
 	defer n.mu.RUnlock()
 	return n.store
 }
+
+// UpdateStore обновляет store новыми данными
+func (n *Node) UpdateStore(newStore map[string]string) {
+	n.mu.Lock()
+	defer n.mu.Unlock()
+	n.store = newStore
+}
